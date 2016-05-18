@@ -6,7 +6,7 @@ def getKey(item):
 histogram = {}
 hist_list = []
 
-sherlock_book = open("sampletext.txt") # opened the file
+sherlock_book = open("sampletext.txt")
 
 parse_the_book = sherlock_book.read().lower()
 
@@ -28,7 +28,5 @@ for key, value in histogram.items():
 top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:19])
 for key, value in top_20:
     print(key, value)
-
-#print(top_20)
 
 sherlock_book.close()
