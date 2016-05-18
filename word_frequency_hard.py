@@ -1,3 +1,4 @@
+#import sys and use argv to require filename to be input on command line
 import string
 
 def getKey(item):
@@ -5,6 +6,7 @@ def getKey(item):
 
 histogram = {}
 hist_list = []
+#this list could've been split instead of hand-repaired.
 ignore_list = ["a", "able", "about", "across", "after", "all", "almost", "also", "am", "among",
                "an", "and", "any", "are", "as", "at", "be", "because", "been", "but",
                "by", "can", "cannot", "could", "dear", "did", "do", "does", "either",
@@ -24,7 +26,7 @@ sherlock_book = open("sampletext.txt")
 parse_the_book = sherlock_book.read().lower()
 
 for d in string.punctuation:
-    parse_the_book = parse_the_book.replace(d, "").replace("\n", " ").replace("  ", "").replace("-", " ")# add hyphen
+    parse_the_book = parse_the_book.replace(d, "").replace("\n", " ").replace("  ", " ").replace("-", " ")# add hyphen
 
 parse_the_book = parse_the_book.split(" ")
 
@@ -40,8 +42,17 @@ for key, value in histogram.items():
     temp = [key, value]
     hist_list.append(temp)
 
-top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:19])
+top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:20])
+most_uses = top_20[0][1]
+
 for key, value in top_20:
-    print(key, value)
+    print(key)
+    print("#" * (int(value * (50 / most_uses))))
 
 sherlock_book.close()
+
+# subtract len of word to get buffer
+
+
+# create list variable. go thru the sorted list. second index and append.
+# use max(list) to find biggest number
