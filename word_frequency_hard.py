@@ -1,12 +1,16 @@
-#import sys and use argv to require filename to be input on command line
 import string
+import sys
 
 def getKey(item):
     return item[1]
 
+# this part is modified to require filename input on command line.
+# filename = "sampletext.txt"
+filename = sys.argv[1]
 histogram = {}
 hist_list = []
-#this list could've been split instead of hand-repaired.
+
+#the ignore_list could've been split instead of hand-repaired. argh.
 ignore_list = ["a", "able", "about", "across", "after", "all", "almost", "also", "am", "among",
                "an", "and", "any", "are", "as", "at", "be", "because", "been", "but",
                "by", "can", "cannot", "could", "dear", "did", "do", "does", "either",
@@ -21,7 +25,10 @@ ignore_list = ["a", "able", "about", "across", "after", "all", "almost", "also",
                "who", "whom", "why", "will", "with", "would", "yet", "you", "your"]
 
 
-sherlock_book = open("sampletext.txt")
+sherlock_book = open(filename)
+
+#sherlock_book = open("sampletext.txt")
+
 
 parse_the_book = sherlock_book.read().lower()
 
