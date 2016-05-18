@@ -46,13 +46,8 @@ top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:20])
 most_uses = top_20[0][1]
 
 for key, value in top_20:
-    print(key)
-    print("#" * (int(value * (50 / most_uses))))
+    bar = ("#" * (int(value * (50 / most_uses))))
+
+    print(key + (" " * (15 - len(key)) + bar))
 
 sherlock_book.close()
-
-# subtract len of word to get buffer
-
-
-# create list variable. go thru the sorted list. second index and append.
-# use max(list) to find biggest number
