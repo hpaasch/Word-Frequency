@@ -11,7 +11,7 @@ sherlock_book = open("sampletext.txt")
 parse_the_book = sherlock_book.read().lower()
 
 for d in string.punctuation:
-    parse_the_book = parse_the_book.replace(d, "").replace("\n", " ").replace("  ", "").replace("-", " ")# add hyphen
+    parse_the_book = parse_the_book.replace(d, "").replace("\n", " ").replace("  ", " ").replace("-", " ")# add hyphen
 
 parse_the_book = parse_the_book.split(" ")
 
@@ -25,7 +25,7 @@ for key, value in histogram.items():
     temp = [key, value]
     hist_list.append(temp)
 
-top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:19])
+top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:20])
 for key, value in top_20:
     print(key, value)
 
