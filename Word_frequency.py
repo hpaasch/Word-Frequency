@@ -25,6 +25,10 @@ for key, value in histogram.items():
     temp = [key, value]
     hist_list.append(temp)
 
-print(sorted(hist_list, key=getKey, reverse=True))
+top_20 = ((sorted(hist_list, key=getKey, reverse=True))[0:19])
+for key, value in top_20:
+    print(key, value)
+
+#print(top_20)
 
 sherlock_book.close()
