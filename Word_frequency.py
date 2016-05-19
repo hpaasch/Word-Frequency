@@ -11,7 +11,9 @@ sherlock_book = open("sampletext.txt")
 parse_the_book = sherlock_book.read().lower()
 
 for d in string.punctuation:
-    parse_the_book = parse_the_book.replace(d, "").replace("\n", " ").replace("  ", " ").replace("-", " ")# add hyphen
+    parse_the_book = parse_the_book.replace(d, "")
+
+parse_the_book = parse_the_book.replace("\n", " ").replace("  ", " ").replace("-", " ")
 
 parse_the_book = parse_the_book.split(" ")
 
