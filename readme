@@ -1,0 +1,22 @@
+Joel,
+
+I tried to collaborate with different people today, partly for the heck of it,
+partly to be inclusive and partly to be able to focus more on my own thinking.
+
+I'm here later, but I got all the way through.
+
+Rayn helped me think about the buffer, and it was much easier than I was trying
+to make it.
+
+The last thing I did was import sys and use argv to require a filename to be
+input on the command line. I think it works as expected. I get an index error
+in the IDE, but it doesn't error out on the terminal. If I did it wrong, I left
+in a commented out line that sets the filename = sampletext.txt. It can be
+restored to run the program.
+
+Word_frequency.py is the Normal Mode homework.
+word_frequency.py is the Hard Mode homework.
+(Sorry for the capitalization inconsistency. I probably need to learn how to
+rename files to fix dumb things like that.)
+
+Hope
